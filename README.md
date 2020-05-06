@@ -6,7 +6,7 @@
       
 Request:
 
-POST /limon-servise/customers/sign-up
+POST /limon-servise/users/sign-up
 
 {
 
@@ -24,7 +24,7 @@ Response: 201 CREATED
       
 Request:
       
-POST /limon-servise/customers/sign-in
+POST /limon-servise/users/sign-in
       
 {
 
@@ -148,7 +148,7 @@ Response: 200 OK
 
 Request:
 
-GET /limon-servise/customers
+GET /limon-servise/users
 
 Response: 200 OK
 
@@ -169,7 +169,7 @@ Response: 200 OK
 
 Request:
 
-GET /limon-servise/customers/{customerId}
+GET /limon-servise/users/{userId}
 
 {
 
