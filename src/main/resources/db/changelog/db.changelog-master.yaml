@@ -6,7 +6,7 @@ databaseChangeLog:
       changes:
         - createTable:
             tableName: user
-              columns:
+            columns:
               - column:
                   name: id
                   type: BIGINT
@@ -30,7 +30,7 @@ databaseChangeLog:
                   type: varchar(512)
         - createTable:
             tableName: car
-              columns:
+            columns:
               - column:
                   name: id
                   type: BIGINT
@@ -81,7 +81,7 @@ databaseChangeLog:
                     unique: true
                     nullable: false
               - column:
-                  name: mileage
+                  name: date
                   type: DATE
                   constraints:
                     unique: true
@@ -93,4 +93,3 @@ databaseChangeLog:
                     nullable: false
                     foreignKeyName: fk_car_user
                     references: user(id)
-
