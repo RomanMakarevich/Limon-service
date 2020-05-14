@@ -20,7 +20,7 @@ public class UserAddCarControllerTest {
 
     @Test
     public void addCarTest() throws Exception {
-        mockMvc.perform(post("/limon-servise/cars")
+        mockMvc.perform(post("/limon-service/cars")
                 .contentType(MediaType.APPLICATION_JSON)
                 .content("{\n" +
                         " \"make\" : \"Mercedes-benz\",\n" +
@@ -33,6 +33,5 @@ public class UserAddCarControllerTest {
                         " \"date\" : \"2020-01-01\"\n" +
                         "}"))
                 .andExpect(status().isOk());
-
     }
 }

@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 @Data
 @RestController
 @AllArgsConstructor
-@RequestMapping("/limon-servise/users")
+@RequestMapping("/limon-service/users")
 public class UserController {
 
     private final UserService userService;

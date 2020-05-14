@@ -22,7 +22,7 @@ public class UserControllerTest {
 
     @Test
     public void testUserSignUpIsCreated() throws Exception {
-        mockMvc.perform(post("/limon-servise/users/sign-up")
+        mockMvc.perform(post("/limon-service/users/sign-up")
                 .contentType(MediaType.APPLICATION_JSON)
                 .content("{\n" +
                         " \"email\" : \"vasya@email.com\",\n" +

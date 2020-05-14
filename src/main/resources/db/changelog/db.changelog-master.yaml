@@ -75,15 +75,9 @@ databaseChangeLog:
                     unique: true
                     nullable: false
               - column:
-                  name: mileage
-                  type: BIGINT
-                  constraints:
-                    unique: true
-                    nullable: false
-              - column:
                   name: user_id
                   type: BIGINT
                   constraints:
-                    nullable: false
+                    nullable: true
                     foreignKeyName: fk_car_user
                     references: user(id)

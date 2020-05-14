@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class UserAddCar {
     final UserAddCarService userAddCarService;
 
-    @PostMapping(value = "/limon-servise/cars", consumes = MediaType.APPLICATION_JSON_VALUE)
+    @PostMapping(value = "/limon-service/cars", consumes = MediaType.APPLICATION_JSON_VALUE)
     public void addCar(@RequestBody final UserAddCarDTO userAddCarDTO) {
         userAddCarService.addCar(userAddCarDTO);
     }
