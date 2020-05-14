@@ -81,12 +81,6 @@ databaseChangeLog:
                     unique: true
                     nullable: false
               - column:
-                  name: date
-                  type: DATE
-                  constraints:
-                    unique: true
-                    nullable: false
-              - column:
                   name: user_id
                   type: BIGINT
                   constraints:
