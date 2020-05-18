@@ -81,6 +81,35 @@ databaseChangeLog:
                     nullable: true
                     foreignKeyName: fk_car_user
                     references: user(id)
+        - createTable:
+            tableName: mileage
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: mileage
+                  type: BIGINT
+                  constraints:
+                    unique: true
+                    nullable: false
+              - column:
+                  name: date
+                  type: DATE
+                  constraints:
+                    unique: true
+                    nullable: false
+              - column:
+                  name: car_id
+                  type: BIGINT
+                  constraints:
+                    nullable: true
+                    foreignKeyName: fk_mileage_car
+                    references: car(id)
   - changeSet:
       id: 2
       author: roman_makarevich

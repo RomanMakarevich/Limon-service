@@ -58,7 +58,23 @@ POST /limon-service/{userId}/cars
 
 Response: 201 CREATED
 
-**LS-4: Как "Клиент", я хочу внести сведенья об обслуживании**
+**LS-4: Как "Клиент", я хочу внести текущий пробек автомобиля**
+
+Request:
+ 
+PUT /limon-service/{userId}/cars/{carId}/mileage
+
+{
+
+    "mileage" : "509500",
+    "date" : "02:01:2020"
+
+}
+
+Response: 200 OK
+
+
+**LS-5: Как "Клиент", я хочу внести сведенья об обслуживании**
 
 Request:
  
@@ -73,21 +89,6 @@ PUT /limon-service/{userId}/cars/{carId}/service
     "sparePart" : "oil",
     "description" : "oil Comma 10W40",
     "mechanic" : "self"
-
-}
-
-Response: 200 OK
-
-**LS-5: Как "Клиент", я хочу внести текущий пробек автомобиля**
-
-Request:
- 
-PUT /limon-service/{userId}/cars/{carId}/mileage
-
-{
-
-    "mileage" : "509500",
-    "date" : "02:01:2020"
 
 }
 
