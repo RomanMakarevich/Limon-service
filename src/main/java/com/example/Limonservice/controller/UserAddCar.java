@@ -6,6 +6,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.extern.java.Log;
 import org.springframework.http.MediaType;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -18,8 +19,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class UserAddCar {
     final UserAddCarService userAddCarService;
 
-    @PostMapping(value = "/limon-service/cars", consumes = MediaType.APPLICATION_JSON_VALUE)
-    public void addCar(@RequestBody final UserAddCarDTO userAddCarDTO) {
-        userAddCarService.addCar(userAddCarDTO);
+    @PostMapping(value = "/limon-service/{userId}/cars", consumes = MediaType.APPLICATION_JSON_VALUE)
+    public void addCar(@PathVariable final Long userId, @RequestBody final UserAddCarDTO userAddCarDTO) {
+        userAddCarService.addCar(userId, userAddCarDTO);
     }
 }

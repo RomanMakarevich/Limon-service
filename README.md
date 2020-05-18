@@ -6,7 +6,7 @@
       
 Request:
 
-POST /limon-servise/users/sign-up
+POST /limon-service/users/sign-up
 
 {
 
@@ -24,7 +24,7 @@ Response: 201 CREATED
       
 Request:
       
-POST /limon-servise/users/sign-in
+POST /limon-service/users/sign-in
       
 {
 
@@ -40,7 +40,7 @@ Response: 200 OK
 
 Request:
       
-POST /limon-servise/cars
+POST /limon-service/{userId}/cars
 
 {
 
@@ -62,7 +62,7 @@ Response: 201 CREATED
 
 Request:
  
-PUT /limon-servise/cars/{carId}/service
+PUT /limon-service/{userId}/cars/{carId}/service
 
 {
 
@@ -82,7 +82,7 @@ Response: 200 OK
 
 Request:
  
-PUT /limon-servise/cars/{carId}/mileage
+PUT /limon-service/{userId}/cars/{carId}/mileage
 
 {
 
@@ -98,7 +98,7 @@ Response: 200 OK
 
 Request:
  
-GET /limon-servise/cars/{carId}/service
+GET /limon-service/{userId}/cars/{carId}/service
 
 Response: 200 OK
 
@@ -122,7 +122,7 @@ Response: 200 OK
 
 Request:
  
-GET /limon-servise/cars/
+GET /limon-service/cars/
 
 Response: 200 OK
 
@@ -148,7 +148,7 @@ Response: 200 OK
 
 Request:
 
-GET /limon-servise/users
+GET /limon-service/users
 
 Response: 200 OK
 
@@ -169,7 +169,7 @@ Response: 200 OK
 
 Request:
 
-GET /limon-servise/users/{userId}
+GET /limon-service/users/{userId}
 
 {
 
@@ -192,7 +192,7 @@ Response: 200 OK
 
 Request:
 
-GET /limon-servise/cars/
+GET /limon-service/cars/
 
 {
 
@@ -224,7 +224,7 @@ Response: 200 OK
                                        
 Request:
                                         
-PUT /limon-servise/cars/{carId}/service
+PUT /limon-service/cars/{carId}/service
                                    
 {
 

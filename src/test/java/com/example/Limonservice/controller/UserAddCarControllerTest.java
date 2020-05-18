@@ -20,7 +20,8 @@ public class UserAddCarControllerTest {
 
     @Test
     public void addCarTest() throws Exception {
-        mockMvc.perform(post("/limon-service/cars")
+        mockMvc.perform(post("/limon-service/1/cars")
+                .header("userId",1)
                 .contentType(MediaType.APPLICATION_JSON)
                 .content("{\n" +
                         " \"make\" : \"Mercedes-benz\",\n" +

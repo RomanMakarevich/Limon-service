@@ -81,3 +81,22 @@ databaseChangeLog:
                     nullable: true
                     foreignKeyName: fk_car_user
                     references: user(id)
+  - changeSet:
+      id: 2
+      author: roman_makarevich
+      changes:
+        - insert:
+            tableName: user
+            columns:
+              - column:
+                  name: id
+                  value: 1
+              - column:
+                  name: email
+                  value: "vasya@email.com"
+              - column:
+                  name: name
+                  value: "VasyaVasiliy"
+              - column:
+                  name: phone
+                  value: "+375291234567"
