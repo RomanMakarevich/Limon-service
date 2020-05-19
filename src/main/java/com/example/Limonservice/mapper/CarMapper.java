@@ -1,13 +1,13 @@
 package com.example.Limonservice.mapper;
 
 
-import com.example.Limonservice.dto.UserAddCarDTO;
+import com.example.Limonservice.dto.AddCarDTO;
 import com.example.Limonservice.entity.CarEntity;
 import org.mapstruct.Mapper;
 
 @Mapper(componentModel = "spring")
 public interface CarMapper {
-    CarEntity sourceToCestination(UserAddCarDTO source);
+    CarEntity sourceToCestination(AddCarDTO source);
 
-    UserAddCarDTO destinationToSource(CarEntity destination);
+    AddCarDTO destinationToSource(CarEntity destination);
 }

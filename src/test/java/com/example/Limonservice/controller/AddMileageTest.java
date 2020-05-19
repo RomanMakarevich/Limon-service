@@ -12,26 +12,19 @@ import static org.springframework.test.web.servlet.request.MockMvcRequestBuilder
 
 @SpringBootTest
 @AutoConfigureMockMvc(addFilters = false)
-
-public class UserAddCarControllerTest {
-
+public class AddMileageTest {
     @Autowired
     private MockMvc mockMvc;
 
     @Test
-    public void addCarTest() throws Exception {
-        mockMvc.perform(post("/limon-service/1/cars")
-                .header("userId",1)
+    public void addMileage() throws Exception {
+        mockMvc.perform(post("/limon-service/1/cars/1/mileage")
+                .header("userId", 1)
+                .param("carId", "1")
                 .contentType(MediaType.APPLICATION_JSON)
                 .content("{\n" +
-                        " \"make\" : \"Mercedes-benz\",\n" +
-                        " \"model\" : \"W123\",\n" +
-                        " \"vin\" : \"wdb12312312312312\",\n" +
-                        " \"releaseYear\" : \"1983\",\n" +
-                        " \"engineType\" : \"240D\",\n" +
-                        " \"typeOfTransmission\" : \"mechanical\",\n" +
-                        " \"mileage\" : \"500000\",\n" +
-                        " \"date\" : \"2020-01-01\"\n" +
+                        " \"mileage\" : 509500,\n" +
+                        " \"date\" : \"2020-01-02\"\n" +
                         "}"))
                 .andExpect(status().isOk());
     }

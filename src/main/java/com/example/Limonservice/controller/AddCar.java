@@ -1,7 +1,7 @@
 package com.example.Limonservice.controller;
 
-import com.example.Limonservice.dto.UserAddCarDTO;
-import com.example.Limonservice.service.UserAddCarService;
+import com.example.Limonservice.dto.AddCarDTO;
+import com.example.Limonservice.service.AddCarService;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.extern.java.Log;
@@ -16,11 +16,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @AllArgsConstructor
 
-public class UserAddCar {
-    final UserAddCarService userAddCarService;
+public class AddCar {
+    final AddCarService addCarService;
 
     @PostMapping(value = "/limon-service/{userId}/cars", consumes = MediaType.APPLICATION_JSON_VALUE)
-    public void addCar(@PathVariable final Long userId, @RequestBody final UserAddCarDTO userAddCarDTO) {
-        userAddCarService.addCar(userId, userAddCarDTO);
+    public void addCar(@PathVariable final Long userId, @RequestBody final AddCarDTO addCarDTO) {
+        addCarService.addCar(userId, addCarDTO);
     }
 }

@@ -5,7 +5,7 @@ import lombok.Data;
 import java.util.Date;
 
 @Data
-public class UserAddCarDTO {
+public class AddCarDTO {
     String make;
     String model;
     String vin;

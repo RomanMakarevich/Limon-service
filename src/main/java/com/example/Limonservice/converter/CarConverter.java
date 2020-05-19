@@ -1,13 +1,13 @@
 package com.example.Limonservice.converter;
 
-import com.example.Limonservice.dto.UserAddCarDTO;
+import com.example.Limonservice.dto.AddCarDTO;
 import com.example.Limonservice.entity.CarEntity;
 import org.springframework.stereotype.Component;
 
 @Component
 public class CarConverter {
 
-    public CarEntity DTOToEntity(UserAddCarDTO dto){
+    public CarEntity DTOToEntity(AddCarDTO dto){
         final CarEntity carEntity = new CarEntity();
         carEntity.setMake(dto.getMake());
         carEntity.setModel(dto.getModel());

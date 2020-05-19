@@ -12,7 +12,7 @@ public class MileageEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private long mileage;
-    private Date data;
+    private Date date;
     @ManyToOne
     @JoinColumn(name = "car_id", nullable = false)
     private CarEntity carEntity;

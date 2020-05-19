@@ -42,13 +42,11 @@ databaseChangeLog:
                   name: make
                   type: varchar(512)
                   constraints:
-                    unique: true
                     nullable: false
               - column:
                   name: model
                   type: varchar(512)
                   constraints:
-                    unique: true
                     nullable: false
               - column:
                   name: vin
@@ -60,19 +58,16 @@ databaseChangeLog:
                   name: release_year
                   type: BIGINT
                   constraints:
-                    unique: true
                     nullable: false
               - column:
                   name: engine_type
                   type: varchar(512)
                   constraints:
-                    unique: true
                     nullable: false
               - column:
                   name: type_of_transmission
                   type: varchar(512)
                   constraints:
-                    unique: true
                     nullable: false
               - column:
                   name: user_id
@@ -129,3 +124,27 @@ databaseChangeLog:
               - column:
                   name: phone
                   value: "+375291234567"
+        - insert:
+            tableName: car
+            columns:
+              - column:
+                  name: make
+                  value: "Mercedes-benz"
+              - column:
+                  name: model
+                  value: "W123"
+              - column:
+                  name: vin
+                  value: "wdb12312312312313"
+              - column:
+                  name: release_year
+                  value: 1983
+              - column:
+                  name: engine_type
+                  value: "240D"
+              - column:
+                  name: type_of_transmission
+                  value: "mechanical"
+              - column:
+                  name: user_id
+                  value: 1
